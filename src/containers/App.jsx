@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import Counter from "../components/Counter";
+import "./App.css";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
+	constructor() {
+		super();
+		this.state = {};
+	}
 
-      </div>
-    );
-  }
+	render() {
+		return (
+			<React.Fragment>
+				<Counter />
+			</React.Fragment>
+		);
+	}
 }
 
 export default App;
