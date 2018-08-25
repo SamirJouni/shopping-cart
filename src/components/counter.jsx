@@ -1,9 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Counter extends Component {
-	render() {
-		return <h1>Hello World !</h1>;
-	}
+const Counter = (props) => {
+
+	return (
+			<div>
+				<span className='m-5'>{props.formatCount()}</span>
+				<button>Increment</button>
+			</div>
+		);
 }
 
 export default Counter;
