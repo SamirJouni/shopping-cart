@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Counter from "../components/Counter";
+import Counters from "../components/Counters";
 import "./App.css";
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Counter counter={this.state.counter} formatCount={this.formatCount}/>
+				<Counters counter={this.state.counter} formatCount={this.formatCount}/>
 			</React.Fragment>
 		);
 	}
