@@ -3,18 +3,21 @@ import Counter from "./Counter";
 
 const Counters = props => {
 
-	const formatCount = () => {
-		const { value } = props.counter;
+	const formatCount = (counter) => {
+		const { value } = counter;
 		return value === 0 ? "Zero" : value;
 	};
 
-	const setCountClasses = () => {
+	const getBadgeClasses = (counter) => {
 		let classes = 'badge m-2 badge-';
-		const { value } = props.counter;
+		const { value } = counter;
 		return classes += value === 0 ? 'warning' : 'primary';
 	}
 
-	return <Counter counter={props.counter} formatCount={formatCount} setClasses={setCountClasses} />;
-};
+	return (
+			props.counters.map((counter) => {
+			return <Counter key={counter.id} counter={counter} formatCount={formatCount} getBadgeClasses={getBadgeClasses} onIncrement={props.onIncrement}/> })
+		);
+	};
 
 export default Counters;
