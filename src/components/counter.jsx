@@ -1,13 +1,12 @@
 import React from "react";
 
-const Counter = (props) => {
-
+const Counter = props => {
 	return (
-			<div>
-				<span className='m-5'>{props.formatCount()}</span>
-				<button>Increment</button>
-			</div>
-		);
-}
+		<div>
+			<span className="badge badge-primary m-2">{props.formatCount()}</span>
+			<button className="btn btn-secondary btn-sm">Increment</button>
+		</div>
+	);
+};
 
 export default Counter;
