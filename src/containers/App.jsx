@@ -23,12 +23,18 @@ class App extends Component {
 		this.setState({counters});
 	};
 
+	handleDelete = counter => {
+		const counters = this.state.counters.filter(ctr => ctr.id !== counter.id);
+		this.setState({counters});
+	};
+
 	render() {
 		return (
 			<React.Fragment>
 				<Counters
 					counters={this.state.counters}
 					onIncrement={this.handleIncrement}
+					onDelete={this.handleDelete}
 				/>
 			</React.Fragment>
 		);
