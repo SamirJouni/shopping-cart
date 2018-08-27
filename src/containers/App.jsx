@@ -28,6 +28,14 @@ class App extends Component {
 		this.setState({counters});
 	};
 
+	handleReset = () => {
+		const counters = this.state.counters.map ((counter) => {
+			counter.value = 0;
+			return counter;
+		});
+		this.setState({counters});
+	};
+
 	render() {
 		return (
 			<React.Fragment>
@@ -35,6 +43,7 @@ class App extends Component {
 					counters={this.state.counters}
 					onIncrement={this.handleIncrement}
 					onDelete={this.handleDelete}
+					onReset={this.handleReset}
 				/>
 			</React.Fragment>
 		);

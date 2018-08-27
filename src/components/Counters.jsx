@@ -13,18 +13,23 @@ const Counters = props => {
 		return (classes += value === 0 ? "warning" : "primary");
 	};
 
-	return props.counters.map(counter => {
-		return (
-			<Counter
-				key={counter.id}
-				counter={counter}
-				formatCount={formatCount}
-				getBadgeClasses={getBadgeClasses}
-				onIncrement={props.onIncrement}
-				onDelete={props.onDelete}
-			/>
-		);
-	});
+	return (
+		<React.Fragment>
+			<button onClick={props.onReset}>Reset</button>
+			{props.counters.map(counter => {
+				return (
+					<Counter
+						key={counter.id}
+						counter={counter}
+						formatCount={formatCount}
+						getBadgeClasses={getBadgeClasses}
+						onIncrement={props.onIncrement}
+						onDelete={props.onDelete}
+					/>
+			);
+		})}
+		</React.Fragment>
+	);
 };
 
 export default Counters;
