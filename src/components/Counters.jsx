@@ -15,7 +15,7 @@ const Counters = props => {
 
 	return (
 		<React.Fragment>
-			<button onClick={props.onReset}>Reset</button>
+			<button onClick={props.onReset} className="btn btn-primary btn-sm m-2">Reset</button>
 			{props.counters.map(counter => {
 				return (
 					<Counter
