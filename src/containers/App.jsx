@@ -41,12 +41,14 @@ class App extends Component {
 		return (
 			<React.Fragment>
 				<Navbar />
-				<Counters
-					counters={this.state.counters}
-					onIncrement={this.handleIncrement}
-					onDelete={this.handleDelete}
-					onReset={this.handleReset}
-				/>
+				<main className="m-4">
+					<Counters
+						counters={this.state.counters}
+						onIncrement={this.handleIncrement}
+						onDelete={this.handleDelete}
+						onReset={this.handleReset}
+					/>
+				</main>
 			</React.Fragment>
 		);
 	}
