@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Counters from "../components/Counters";
+import Navbar from "../components/Navbar";
 import "./App.css";
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
+				<Navbar />
 				<Counters
 					counters={this.state.counters}
 					onIncrement={this.handleIncrement}
