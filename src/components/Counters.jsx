@@ -13,11 +13,12 @@ const Counters = props => {
 		return (classes += value === 0 ? "warning" : "primary");
 	};
 
-	const {counters, onIncrement, onDelete, onReset} = props;
+	const {counters, onIncrement, onDelete, onReset, onAdd} = props;
 
 	return (
 		<React.Fragment>
-			<button onClick={onReset} className="btn btn-primary btn-sm m-2">Reset</button>
+			<button onClick={onReset} className="btn btn-primary btn-sm m-2 mr-5">Reset</button>
+			<button onClick={onAdd} className="btn btn-success btn-sm ml-5">Add</button>
 			{counters.map(counter => {
 				return (
 					<Counter
