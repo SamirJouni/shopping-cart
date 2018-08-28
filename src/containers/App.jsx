@@ -8,10 +8,10 @@ class App extends Component {
 		super();
 		this.state = {
 			counters: [
-				{value: 3, id: 0},
+				{ value: 0, id: 0},
 				{ value: 0, id: 1 },
 				{ value: 0, id: 2 },
-				{ value: 0, id: 3 },
+				{ value: 3, id: 3 },
 			]
 		};
 	}
